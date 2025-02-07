@@ -10,6 +10,8 @@ public class MapGenerator : MonoBehaviour
     public enum DrawMode {NoiseMap, ColorMap, DrawMesh}
     public DrawMode drawMode;
     
+    public Noise.NormalizeMode normalizeMode;
+    
     [Space]
     public int seed;
     
@@ -115,7 +117,7 @@ public class MapGenerator : MonoBehaviour
 
     public MapData GenerateMapData(Vector2 center)
     {
-        var noiseMap = Noise.GenerateNoiseMap(mapChunkSize, mapChunkSize, noiseScale, seed, octaves, persistence, lacunarity, center + offset);
+        var noiseMap = Noise.GenerateNoiseMap(mapChunkSize, mapChunkSize, noiseScale, seed, octaves, persistence, lacunarity, center + offset, normalizeMode);
 
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
         for (int y = 0; y < mapChunkSize; y++)
@@ -125,10 +127,9 @@ public class MapGenerator : MonoBehaviour
                 float currentHeight = noiseMap[x, y];
                 for (int i = 0; i < regions.Length; i++)
                 {
-                    if (currentHeight > regions[i].height) continue;
+                    if (currentHeight < regions[i].height) break;
                     
                     colorMap[y * mapChunkSize + x] = regions[i].color;
-                    break;
                 }
             }
         }
