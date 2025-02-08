@@ -16,7 +16,7 @@ public class MapGenerator : MonoBehaviour
     [Space]
     public int seed;
     
-    public const int mapChunkSize = 241;
+    public const int mapChunkSize = 239;
     [Range(0, 6)] public int lodForPreview;
     public float noiseScale;
 
@@ -123,7 +123,7 @@ public class MapGenerator : MonoBehaviour
 
     public MapData GenerateMapData(Vector2 center, bool useFalloff)
     {
-        var noiseMap = Noise.GenerateNoiseMap(mapChunkSize, mapChunkSize, noiseScale, seed, octaves, persistence, lacunarity, center + offset, normalizeMode);
+        var noiseMap = Noise.GenerateNoiseMap(mapChunkSize + 2, mapChunkSize + 2, noiseScale, seed, octaves, persistence, lacunarity, center + offset, normalizeMode);
         float[,] falloffMap = (useFalloff) ? FalloffGenerator.GenerateFalloffMap(mapChunkSize) : null;
         
         Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
