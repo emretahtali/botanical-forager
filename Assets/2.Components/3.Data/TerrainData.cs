@@ -10,4 +10,8 @@ public class TerrainData : UpdatableData
     [Space]
     public float meshHeightMultiplier;
     public AnimationCurve meshHeightCurve;
+
+    public float minHeight => uniformScale * meshHeightMultiplier * meshHeightCurve.Evaluate(0);
+
+    public float maxHeight => uniformScale * meshHeightMultiplier * meshHeightCurve.Evaluate(1);
 }

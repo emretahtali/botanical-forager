@@ -29,10 +29,6 @@ public class MapGenerator : MonoBehaviour
     private void OnValuesUpdated()
     {
         if (!Application.isPlaying) DrawMapInEditor();
-    }
-
-    private void OnTerrainValuesUpdated()
-    {
         textureData.ApplyToMaterial(terrainMaterial);
     }
     
@@ -125,6 +121,9 @@ public class MapGenerator : MonoBehaviour
             }
         }
 
+        // textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
+        textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
+        
         return new MapData(noiseMap);
     }
 
