@@ -136,8 +136,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TerrainShaderCustomFunction_c83f58f26475447bb536dffc6fdbfa72_floatArrayTexture_6_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TerrainShaderCustomFunction_c83f58f26475447bb536dffc6fdbfa72_testTexture_5_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2D:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _testTexture:
+        m_Texture: {fileID: 2800000, guid: ad50506dd57e0ef46ac378ee2dd4146b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -218,6 +230,7 @@ Material:
     - _maxColorCount: 0
     - _maxHeight: 100
     - _minHeight: 0
+    - _testScale: 1
     m_Colors:
     - _BASE_COLOR: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

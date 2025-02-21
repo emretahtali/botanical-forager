@@ -8,6 +8,12 @@
         },
         {
             "m_Id": "4bfe35da4b5b4d3fa929ae9d76e0bb24"
+        },
+        {
+            "m_Id": "b642e9f841c545cba5412fb7f3b4deea"
+        },
+        {
+            "m_Id": "3b562dae30b0491085e600d195ab824c"
         }
     ],
     "m_Keywords": [],
@@ -424,6 +430,36 @@
 }
 
 {
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
+    "m_ObjectId": "3b562dae30b0491085e600d195ab824c",
+    "m_Guid": {
+        "m_GuidSerialized": "55ebbf4b-e834-42d9-b4dd-b1b7ef6ddb4c"
+    },
+    "m_Name": "testTexture",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "testTexture",
+    "m_DefaultReferenceName": "_testTexture",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_Guid": ""
+    },
+    "isMainTexture": false,
+    "useTilingAndOffset": false,
+    "m_Modifiable": true,
+    "m_DefaultType": 0
+}
+
+{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
     "m_ObjectId": "4bfe35da4b5b4d3fa929ae9d76e0bb24",
@@ -526,6 +562,12 @@
         },
         {
             "m_Id": "2616725b97664352b7bbfeb4a9a193e5"
+        },
+        {
+            "m_Id": "b642e9f841c545cba5412fb7f3b4deea"
+        },
+        {
+            "m_Id": "3b562dae30b0491085e600d195ab824c"
         }
     ]
 }
@@ -734,10 +776,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -502.4000244140625,
-            "y": 327.2000427246094,
+            "x": -624.0,
+            "y": 344.0,
             "width": 128.80001831054688,
-            "height": 33.5999755859375
+            "height": 33.600006103515628
         }
     },
     "m_Slots": [
@@ -785,10 +827,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -505.6000061035156,
-            "y": 360.79998779296877,
+            "x": -624.0,
+            "y": 377.6000061035156,
             "width": 132.0,
-            "height": 33.60003662109375
+            "height": 33.600006103515628
         }
     },
     "m_Slots": [
@@ -806,6 +848,34 @@
     },
     "m_Property": {
         "m_Id": "2616725b97664352b7bbfeb4a9a193e5"
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "b642e9f841c545cba5412fb7f3b4deea",
+    "m_Guid": {
+        "m_GuidSerialized": "aadd4abf-6f7e-41ff-b991-1d016e2d0aff"
+    },
+    "m_Name": "testScale",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "testScale",
+    "m_DefaultReferenceName": "_testScale",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
@@ -877,7 +947,7 @@
     "m_Group": {
         "m_Id": ""
     },
-    "m_Name": "myFunc (Custom Function)",
+    "m_Name": "TerrainShader (Custom Function)",
     "m_DrawState": {
         "m_Expanded": true,
         "m_Position": {
@@ -914,7 +984,7 @@
         "m_SerializableColors": []
     },
     "m_SourceType": 0,
-    "m_FunctionName": "myFunc",
+    "m_FunctionName": "TerrainShader",
     "m_FunctionSource": "f49e9e739d494cbf908b17f324561bdf",
     "m_FunctionBody": "Enter function body here..."
 }
