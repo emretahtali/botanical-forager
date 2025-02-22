@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class EndlessTerrain : MonoBehaviour
@@ -135,13 +134,13 @@ public class EndlessTerrain : MonoBehaviour
             if (!mapDataReceived) return;
             
             float sqrViewerDstFromNearestEdge = bounds.SqrDistance(viewerPosition);
-            bool visible = sqrViewerDstFromNearestEdge <= math.pow(maxViewDst, 2);
+            bool visible = sqrViewerDstFromNearestEdge <= Mathf.Pow(maxViewDst, 2);
 
             if (visible)
             {
                 int lodIndex = 0;
                 while (lodIndex < detailLevels.Length - 1
-                       && sqrViewerDstFromNearestEdge > math.pow(detailLevels[lodIndex].visibleDstTreshold, 2))
+                       && sqrViewerDstFromNearestEdge > Mathf.Pow(detailLevels[lodIndex].visibleDstTreshold, 2))
                 {
                     lodIndex++;
                 }
