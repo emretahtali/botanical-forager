@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(UpdatableData), true)]
 public class UpdateableDataEditor : Editor
 {
@@ -19,3 +21,5 @@ public class UpdateableDataEditor : Editor
         }
     }
 }
+
+#endif

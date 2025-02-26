@@ -26,6 +26,12 @@ public class MapGenerator : MonoBehaviour
     private readonly Queue<MapThreadInfo<MapData>> mapDataThreadInfoQueue = new();
     private readonly Queue<MapThreadInfo<MeshData>> meshDataThreadInfoQueue = new();
 
+    private void Awake()
+    {
+        textureData.ApplyToMaterial(terrainMaterial);
+        textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
+    }
+    
     private void OnValuesUpdated()
     {
         if (!Application.isPlaying) DrawMapInEditor();
@@ -34,6 +40,8 @@ public class MapGenerator : MonoBehaviour
     
     public void DrawMapInEditor()
     {
+        textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
+        
         MapData mapData = GenerateMapData(Vector2.zero, terrainData.useFalloff);
         MapDisplay mapDisplay = FindObjectOfType<MapDisplay>(); // TODO: later change to serialized field
         
@@ -120,10 +128,6 @@ public class MapGenerator : MonoBehaviour
                 if (useFalloff) noiseMap[x, y] = Mathf.Clamp01(noiseMap[x, y] - falloffMap[x, y]);
             }
         }
-
-        // textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
-        textureData.updateMeshHeights(terrainMaterial, terrainData.minHeight, terrainData.maxHeight);
-        
         return new MapData(noiseMap);
     }
 
