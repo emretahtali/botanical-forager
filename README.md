@@ -8,6 +8,9 @@ Currently I am developing the procedural terrain generation system. It is far fr
 * `Custom texture scriptable object system` that lets the user define different textures and height levels to display on the terrain
 * `Triplanar shading` for the textures so same texture on different surface normals and different textures can blend seamlessly
 
+[Link to the test build of the current terrain generation system](https://github.com/emretahtali/botanical-forager/tree/main/land%20generation%20test%20build)
+
+---
 ![chunks](https://github.com/user-attachments/assets/fa89a72e-d6fb-4235-8719-787949cd6099)
 ![view](https://github.com/user-attachments/assets/cdfe220a-e726-486d-bb7d-89065333b833)
 ![texture](https://github.com/user-attachments/assets/ce7214ec-9675-4415-81ad-b4b7f6044191)
